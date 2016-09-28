@@ -1,3 +1,39 @@
 [submodule "doc"]
 	path = doc
 	url = https://github.com/non-official-SD/documentation.git
+[submodule "packaging"]
+	path = packaging
+	url = https://github.com/non-official-SD/packaging.git
+[submodule "cars"]
+	path = data/cars
+	url = https://github.com/non-official-SD/cars.git
+[submodule "config"]
+	path = data/config
+	url = https://github.com/non-official-SD/config.git
+[submodule "data"]
+	path = data/data
+	url = https://github.com/non-official-SD/data.git
+[submodule "drivers"]
+	path = data/drivers
+	url = https://github.com/non-official-SD/drivers.git
+[submodule "circuit"]
+	path = data/tracks/circuit
+	url = https://github.com/non-official-SD/circuit.git
+[submodule "dirt"]
+	path = data/tracks/dirt
+	url = https://github.com/non-official-SD/dirt.git
+[submodule "gprix"]
+	path = data/tracks/gprix
+	url = https://github.com/non-official-SD/gprix.git
+[submodule "karting"]
+	path = data/tracks/karting
+	url = https://github.com/non-official-SD/karting.git
+[submodule "road"]
+	path = data/tracks/road
+	url = https://github.com/non-official-SD/road.git
+[submodule "speedway"]
+	path = data/tracks/speedway
+	url = https://github.com/non-official-SD/speedway.git
+[submodule "test_tracks"]
+	path = data/tracks/test_tracks
+	url = https://github.com/non-official-SD/test_tracks.git
