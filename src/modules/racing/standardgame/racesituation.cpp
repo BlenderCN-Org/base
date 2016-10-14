@@ -3,7 +3,7 @@
     file        : racesituation.cpp
     copyright   : (C) 2010 by Jean-Philippe Meuret
     web         : www.speed-dreams.org 
-    version     : $Id: racesituation.cpp 6294 2015-11-30 00:20:46Z kakukri $
+    version     : $Id: racesituation.cpp 6481 2016-10-11 17:38:00Z beaglejoe $
 
  ***************************************************************************/
 
@@ -19,7 +19,7 @@
 /** @file   
     		The central raceman data structure (situation + other race infos)
     @author	    Jean-Philippe Meuret
-    @version	$Id: racesituation.cpp 6294 2015-11-30 00:20:46Z kakukri $
+    @version	$Id: racesituation.cpp 6481 2016-10-11 17:38:00Z beaglejoe $
 */
 
 #include <cstdlib>
@@ -34,7 +34,11 @@
 #endif
 
 #include <portability.h>
+#ifdef CLIENT_SERVER
+#include <csnetwork.h>
+#else
 #include <network.h>
+#endif
 #include <robot.h>
 #include <raceman.h>
 #include <replay.h>

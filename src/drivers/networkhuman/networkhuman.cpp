@@ -4,7 +4,7 @@
     created              : Sat Mar 18 23:16:38 CET 2000
     copyright            : (C) 2000 by Eric Espie
     email                : torcs@free.fr
-    version              : $Id: networkhuman.cpp 5522 2013-06-17 21:03:25Z torcs-ng $
+    version              : $Id: networkhuman.cpp 6481 2016-10-11 17:38:00Z beaglejoe $
 
  ***************************************************************************/
 
@@ -20,7 +20,7 @@
 /** @file   
     		
     @author	<a href=mailto:torcs@free.fr>Eric Espie</a>
-    @version	$Id: networkhuman.cpp 5522 2013-06-17 21:03:25Z torcs-ng $
+    @version	$Id: networkhuman.cpp 6481 2016-10-11 17:38:00Z beaglejoe $
 */
 
 /* 2013/3/21 Tom Low-Shang
@@ -28,7 +28,11 @@
  * Deleted original contents, except for robot interface entry points.
  */
 #include <portability.h>
+#ifdef CLIENT_SERVER
+#include <csnetwork.h>
+#else
 #include <network.h>
+#endif
 #include <humandriver.h>
 
 static void initTrack(int index, tTrack* track, void *carHandle, void **carParmHandle, tSituation *s);

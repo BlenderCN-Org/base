@@ -4,7 +4,7 @@
     created     : Fri Jan  3 22:24:41 CET 2003
     copyright   : (C) 2003 by Eric Espie                        
     email       : eric.espie@torcs.org   
-    version     : $Id: racemanmenu.cpp 6353 2016-01-31 16:22:09Z beaglejoe $
+    version     : $Id: racemanmenu.cpp 6481 2016-10-11 17:38:00Z beaglejoe $
 
  ***************************************************************************/
 
@@ -20,7 +20,7 @@
 /** @file   
     		The race manager menu (where you can configure, load, save, start a race)
     @author	<a href=mailto:eric.espie@torcs.org>Eric Espie</a>
-    @version	$Id: racemanmenu.cpp 6353 2016-01-31 16:22:09Z beaglejoe $
+    @version	$Id: racemanmenu.cpp 6481 2016-10-11 17:38:00Z beaglejoe $
 */
 
 #include <vector>
@@ -39,7 +39,11 @@
 #include <cars.h>
 
 #include <playerconfig.h>
+#ifdef CLIENT_SERVER
+#include <csnetwork.h>
+#else
 #include <network.h>
+#endif
 
 #include "legacymenu.h"
 #include "racescreens.h"

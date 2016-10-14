@@ -3,7 +3,7 @@
     file        : racenetwork.cpp
     copyright   : (C) 2009 by Brian Gavin 
     web         : www.speed-dreams.org 
-    version     : $Id: racenetwork.cpp 5081 2012-12-30 18:24:16Z pouillot $
+    version     : $Id: racenetwork.cpp 6481 2016-10-11 17:38:00Z beaglejoe $
 
  ***************************************************************************/
 
@@ -19,10 +19,14 @@
 /** @file   
     		
     @author	    Brian Gavin
-    @version	$Id: racenetwork.cpp 5081 2012-12-30 18:24:16Z pouillot $
+    @version	$Id: racenetwork.cpp 6481 2016-10-11 17:38:00Z beaglejoe $
 */
 
+#ifdef CLIENT_SERVER
+#include <csnetwork.h>
+#else
 #include <network.h>
+#endif
 
 #include "standardgame.h"
 

@@ -4,7 +4,7 @@
     created     : Sat Nov 16 12:13:31 CET 2002
     copyright   : (C) 2002 by Eric Espie
     email       : eric.espie@torcs.org   
-    version     : $Id: racemain.cpp 6084 2015-08-21 00:07:15Z beaglejoe $
+    version     : $Id: racemain.cpp 6481 2016-10-11 17:38:00Z beaglejoe $
  ***************************************************************************/
 
 /***************************************************************************
@@ -19,7 +19,7 @@
 /** @file   
     		
     @author	<a href=mailto:eric.espie@torcs.org>Eric Espie</a>
-    @version	$Id: racemain.cpp 6084 2015-08-21 00:07:15Z beaglejoe $
+    @version	$Id: racemain.cpp 6481 2016-10-11 17:38:00Z beaglejoe $
 */
 
 #include <sstream>
@@ -27,7 +27,11 @@
 #include <portability.h>
 
 #include <robot.h>
+#ifdef CLIENT_SERVER
+#include <csnetwork.h>
+#else
 #include <network.h>
+#endif
 
 #include "standardgame.h"
 

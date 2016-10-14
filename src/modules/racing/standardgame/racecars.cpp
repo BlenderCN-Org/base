@@ -4,7 +4,7 @@
     created     : Sat Nov 23 09:05:23 CET 2002
     copyright   : (C) 2002 by Eric Espie 
     email       : eric.espie@torcs.org 
-    version     : $Id: racecars.cpp 6363 2016-02-27 18:48:29Z kakukri $
+    version     : $Id: racecars.cpp 6481 2016-10-11 17:38:00Z beaglejoe $
 
  ***************************************************************************/
 
@@ -20,14 +20,18 @@
 /** @file   
     		
     @author	<a href=mailto:eric.espie@torcs.org>Eric Espie</a>
-    @version	$Id: racecars.cpp 6363 2016-02-27 18:48:29Z kakukri $
+    @version	$Id: racecars.cpp 6481 2016-10-11 17:38:00Z beaglejoe $
 */
 
 #include <cstdlib>
 
 #include <portability.h>
 #include <raceman.h>
+#ifdef CLIENT_SERVER
+#include <csnetwork.h>
+#else
 #include <network.h>
+#endif
 #include <robot.h>
 #include <robottools.h>
 #include <teammanager.h>

@@ -4,7 +4,7 @@
     created              : July 2009
     copyright            : (C) 2009 Brian Gavin
     web                  : speed-dreams.sourceforge.net
-    version              : $Id: networkingmenu.cpp 5870 2014-11-29 12:14:30Z wdbee $
+    version              : $Id: networkingmenu.cpp 6481 2016-10-11 17:38:00Z beaglejoe $
 
  ***************************************************************************/
 
@@ -38,7 +38,11 @@
 #include <tracks.h>
 #include <cars.h>
 #include <drivers.h>
+#ifdef CLIENT_SERVER
+#include <csnetwork.h>
+#else
 #include <network.h>
+#endif
 
 #include <playerconfig.h>
 #include <playerpref.h>
