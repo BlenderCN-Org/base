@@ -4,7 +4,7 @@
     created              : Fri Aug 13 22:29:56 CEST 1999
     copyright            : (C) 1999, 2004 by Eric Espie, Bernhard Wymann
     email                : torcs@free.fr
-    version              : $Id: guiscreen.cpp 6316 2015-12-23 19:19:47Z beaglejoe $
+    version              : $Id: guiscreen.cpp 6484 2016-10-21 03:02:30Z beaglejoe $
 ***************************************************************************/
 
 /***************************************************************************
@@ -19,7 +19,7 @@
 /** @file
     Screen management.
     @author	<a href=mailto:torcs@free.fr>Eric Espie</a>
-    @version	$Id: guiscreen.cpp 6316 2015-12-23 19:19:47Z beaglejoe $
+    @version	$Id: guiscreen.cpp 6484 2016-10-21 03:02:30Z beaglejoe $
     @ingroup	screen
 */
 
@@ -495,6 +495,9 @@ bool GfScrInitSDL2(int nWinWidth, int nWinHeight, int nFullScreen)
 		GfLogError("Couldn't initialize SDL audio/video sub-system (%s)\n", SDL_GetError());
 		return false;
 	}
+#if ((SDL_MAJOR_VERSION >= 2) && (SDL_PATCHLEVEL >= 5))
+	SDL_SetHint(SDL_HINT_MOUSE_FOCUS_CLICKTHROUGH, "1");
+#endif
 
 	// Get selected frame buffer specs from config file
 	// 1) Load the config file
